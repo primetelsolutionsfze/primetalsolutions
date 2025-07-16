@@ -1,0 +1,46 @@
+/* Base Styles */
+.section {
+  padding: 8rem 0;
+  scroll-margin-top: 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Shared Elements */
+.section-heading {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  color: white;
+}
+
+.section-subtitle {
+  font-size: 1.3rem;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section {
+    padding: 5rem 0;
+  }
+  
+  .section-heading {
+    font-size: 2.2rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1.1rem;
+  }
+}
