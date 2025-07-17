@@ -171,12 +171,55 @@
 }
 
 .highlight {
-  color: #00f2fe;
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
   font-weight: 800;
 }
 
 @media (max-width: 768px) {
   .contact-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Extra mobile responsiveness for contact section */
+@media (max-width: 600px) {
+  .contact-grid {
+    display: block;
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+  .contact-info {
+    width: 100%;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .info-card {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 16px 12px;
+  }
+  .contact-form {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 16px 8px;
+  }
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    font-size: 1rem;
+  }
+  .submit-btn {
+    width: 100%;
+    font-size: 1rem;
   }
 }

@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Section.css';
 import './WhyPrimetel.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
-const WhyPrimetel = () => (
-  <section className="section why-primetel-section" id="why-primetel">
+const WhyPrimetel = () => {
+  useEffect(() => {
+    AOS.init({ once: true });
+    AOS.refresh();
+  }, []);
+
+  return (
+    <section className="section why-primetel-section" id="why-primetel">
     <div className="floating-shapes" data-aos="zoom-in" data-aos-delay="100">
       <div className="shape triangle"></div>
       <div className="shape circle"></div>
@@ -42,6 +50,7 @@ const WhyPrimetel = () => (
       </div>
     </div>
   </section>
-);
+  );
+};
 
 export default WhyPrimetel;

@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Section.css';
 import './Industries.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
-const Industries = () => (
-  <section className="section industries-section" id="industries">
+const Industries = () => {
+  useEffect(() => {
+    AOS.init({ once: true });
+    AOS.refresh();
+  }, []);
+
+  return (
+    <section className="section industries-section" id="industries">
     <div className="globe-container" data-aos="zoom-in" data-aos-delay="100">
       <div className="globe"></div>
     </div>
@@ -49,6 +57,7 @@ const Industries = () => (
       </div>
     </div>
   </section>
-);
+  );
+};
 
 export default Industries;

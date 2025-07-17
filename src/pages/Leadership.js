@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Section.css';
 import './Leadership.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
-const Leadership = () => (
-  <section className="section leadership-section" id="leadership">
+const Leadership = () => {
+  useEffect(() => {
+    AOS.init({ once: true });
+    AOS.refresh();
+  }, []);
+
+  return (
+    <section className="section leadership-section" id="leadership">
     <div className="section-content">
       <div className="section-header" data-aos="fade-down">
         <h1 className="section-heading" data-aos="fade-up" data-aos-delay="100">Our <span className="highlight">Leadership</span></h1>
@@ -56,6 +64,7 @@ const Leadership = () => (
       </div>
     </div>
   </section>
-);
+  );
+};
 
 export default Leadership;

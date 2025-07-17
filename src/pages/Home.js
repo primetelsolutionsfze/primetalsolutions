@@ -11,6 +11,7 @@ import Industries from './Industries';
 import WhyPrimetel from './WhyPrimetel';
 import Contact from './Contact';
 import './Home.css';
+import Particles from './Particles';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -24,12 +25,21 @@ const Home = () => {
       {/* Cosmic Hero Section */}
       <section className="night-sky-hero" data-aos="fade-in">
         <div className="cosmic-overlay"></div>
-        <div className="stars"></div>
+        <Particles
+          particleColors={['#ffffff', '#ffffff']}
+          particleCount={200}
+          particleSpread={10}
+          speed={0.1}
+          particleBaseSize={100}
+          moveParticlesOnHover={true}
+          alphaParticles={false}
+          disableRotation={false}
+        />
+          <div className="cosmic-overlay"></div>
         <div className="twinkling"></div>
-        <div className="nebula"></div>
+       <div className="nebula"></div>
         <div className="floating-elements"></div>
         <div className="satellite"></div>
-        
         <div className="hero-content">
           <div className="hero-text">
             <h1 className="hero-title">
@@ -65,11 +75,11 @@ const Home = () => {
       <div className="content-sections">
         <section><About /></section>
         <section><Services /></section>
-        <section><Projects /></section>
+        <section><WhyPrimetel /></section>
         <section><Technologies /></section>
         <section><Industries /></section>
+        <section><Projects /></section>
         <section><Leadership /></section>
-        <section><WhyPrimetel /></section>
         <section><Contact /></section>
       </div>
     </div>

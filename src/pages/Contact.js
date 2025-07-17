@@ -1,8 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import './Section.css';
 import './Contact.css';
 
 const Contact = () => {
+  useEffect(() => {
+    AOS.init({ once: true });
+    AOS.refresh();
+  }, []);
   const [form, setForm] = useState({ name: '', email: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
 

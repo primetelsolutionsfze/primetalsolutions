@@ -97,11 +97,10 @@ const Navbar = () => {
               </ul>
             </li>
             <li><NavLink to="/why">WHY PRIMETEL</NavLink></li>
-            <li><NavLink to="/contact">CONTACT</NavLink></li>
           </ul>
 
           <div className="navbar-cta">
-            <Link to="/contact" className="cta-button">GET STARTED</Link>
+            <Link to="/contact" className="cta-button">CONTACT</Link>
           </div>
         </div>
       </nav>

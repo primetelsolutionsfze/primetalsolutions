@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Section.css';
 import './About.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
-const About = () => (
-  <section className="section about-section" id="about">
+const About = () => {
+  useEffect(() => {
+    AOS.init({ once: true });
+    AOS.refresh();
+  }, []);
+  return (
+    <section className="section about-section" id="about">
     <div className="circles-bg">
       {[...Array(10)].map((_, i) => <div key={i} className="floating-circle" data-aos="zoom-in" data-aos-delay={i * 60 + 100} />)}
     </div>
@@ -51,6 +58,7 @@ const About = () => (
       </div>
     </div>
   </section>
-);
+  );
+};
 
 export default About;

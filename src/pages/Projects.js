@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Section.css';
 import './Projects.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
-const Projects = () => (
-  <section className="section projects-section" id="projects">
+const Projects = () => {
+  useEffect(() => {
+    AOS.init({ once: true });
+    AOS.refresh();
+  }, []);
+
+  return (
+    <section className="section projects-section" id="projects">
     <div className="diagonal-bg" data-aos="fade-in" data-aos-delay="100"></div>
     <div className="section-content">
       <div className="section-header" data-aos="fade-up">
@@ -46,6 +54,7 @@ const Projects = () => (
       </div>
     </div>
   </section>
-);
+  );
+};
 
 export default Projects;

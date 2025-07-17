@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Section.css';
 import './Technologies.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
-const Technologies = () => (
-  <section className="section technologies-section" id="technologies">
+const Technologies = () => {
+  useEffect(() => {
+    AOS.init({ once: true });
+    AOS.refresh();
+  }, []);
+
+  return (
+    <section className="section technologies-section" id="technologies">
     <div className="particles-bg" id="particles-js" data-aos="fade-in" data-aos-delay="100"></div>
     <div className="section-content">
       <div className="section-header" data-aos="fade-up">
@@ -70,6 +78,7 @@ const Technologies = () => (
       </div>
     </div>
   </section>
-);
+  );
+};
 
 export default Technologies;
