@@ -6,8 +6,17 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [scrolled, setScrolled] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 900);
   const dropdownRef = useRef(null);
   const location = useLocation();
+  // Update isMobile on window resize
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 900);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   // Handle scroll effect
   useEffect(() => {
@@ -43,6 +52,18 @@ const Navbar = () => {
     setActiveDropdown(activeDropdown === menu ? null : menu);
   };
 
+  // Handlers for hover (desktop only)
+  const handleDropdownMouseEnter = (menu) => {
+    if (!isMobile) {
+      setActiveDropdown(menu);
+    }
+  };
+  const handleDropdownMouseLeave = (menu) => {
+    if (!isMobile) {
+      setActiveDropdown((current) => (current === menu ? null : current));
+    }
+  };
+
   return (
     <header className={`navbar-container ${scrolled ? 'scrolled' : ''}`}>
       <nav className="navbar">
@@ -66,26 +87,38 @@ const Navbar = () => {
           <ul className="navbar-links">
             <li><NavLink to="/">HOME</NavLink></li>
             <li><NavLink to="/about">ABOUT</NavLink></li>
-            <li className="dropdown-container">
+            <li
+              className="dropdown-container"
+              onMouseEnter={() => handleDropdownMouseEnter('services')}
+              onMouseLeave={() => handleDropdownMouseLeave('services')}
+            >
               <button
                 className={`dropdown-btn ${activeDropdown === 'services' ? 'active' : ''}`}
                 onClick={() => toggleDropdown('services')}
                 type="button"
+                aria-haspopup="true"
+                aria-expanded={activeDropdown === 'services'}
               >
                 SERVICES <span className="dropdown-arrow">▼</span>
               </button>
               <ul className={`dropdown-menu ${activeDropdown === 'services' ? 'active' : ''}`}>
-               
                 <li><NavLink to="/services">Custom Telco Software</NavLink></li>
                 <li><NavLink to="/services">Data & Analytics</NavLink></li>
                 <li><NavLink to="/services">Integration</NavLink></li>
                 <li><NavLink to="/services">DevOps</NavLink></li>
               </ul>
             </li>
-            <li className="dropdown-container">
-              <button 
+            <li
+              className="dropdown-container"
+              onMouseEnter={() => handleDropdownMouseEnter('more')}
+              onMouseLeave={() => handleDropdownMouseLeave('more')}
+            >
+              <button
                 className={`dropdown-btn ${activeDropdown === 'more' ? 'active' : ''}`}
                 onClick={() => toggleDropdown('more')}
+                type="button"
+                aria-haspopup="true"
+                aria-expanded={activeDropdown === 'more'}
               >
                 MORE <span className="dropdown-arrow">▼</span>
               </button>
