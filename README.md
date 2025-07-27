@@ -1,10 +1,10 @@
 <<<<<<< HEAD
-# primetalsolutions
+# Primetel Solutions Website
 =======
 
 # Primetel Solutions Website
 
-This is the official website for Primetel Solutions FZE, empowering connectivity across continents. Built with React, it features:
+This is the official website for Primetel Solutions, empowering connectivity across continents. Built with React, it features:
 
 - Modern, professional design and responsive layout
 - Company overview, vision, mission, and leadership
@@ -39,13 +39,7 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 ## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
 ### Analyzing the Bundle Size
 

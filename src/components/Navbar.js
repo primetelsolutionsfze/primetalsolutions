@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Link, NavLink as RouterNavLink, useLocation } from 'react-router-dom';
 import './Navbar.css';
 
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -68,8 +69,9 @@ const Navbar = () => {
     <header className={`navbar-container ${scrolled ? 'scrolled' : ''}`}>
       <nav className="navbar">
         <div className="navbar-brand">
-          <Link to="/" className="navbar-logo">
-            <span className="logo-highlight">PRIMETEL</span> SOLUTIONS
+          <Link to="/" className="navbar-logo" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <img src={process.env.PUBLIC_URL + '/logo.png'} alt="Primetel Solutions Logo" style={{ height: 36, width: 36, borderRadius: 8 }} />
+            <span className="logo-highlight logo-text-main">PRIMETEL</span> <span className="logo-text-main">SOLUTIONS</span>
           </Link>
           
           <button 
