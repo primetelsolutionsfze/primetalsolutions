@@ -14,7 +14,7 @@ const Services = () => {
   return (
     <>
       <Helmet>
-        <link rel="canonical" href="https://primetalsolutions.com/services" />
+        <link rel="canonical" href="https://primetelsolutionsfze.com/services" />
       </Helmet>
       <section className="section services-section" id="services" aria-labelledby="services-heading">
         <div className="hexagon-bg" data-aos="zoom-in" data-aos-delay="100" role="presentation" />

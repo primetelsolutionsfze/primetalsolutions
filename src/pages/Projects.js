@@ -14,7 +14,7 @@ const Projects = () => {
   return (
     <>
       <Helmet>
-        <link rel="canonical" href="https://primetalsolutions.com/projects" />
+        <link rel="canonical" href="https://primetelsolutionsfze.com/projects" />
       </Helmet>
       <section className="section projects-section" id="projects" aria-labelledby="projects-heading">
         <div className="diagonal-bg" data-aos="fade-in" data-aos-delay="100" role="presentation"></div>

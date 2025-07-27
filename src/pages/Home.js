@@ -24,7 +24,7 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <link rel="canonical" href="https://primetalsolutions.com/" />
+        <link rel="canonical" href="https://primetelsolutionsfze.com/" />
       </Helmet>
       <main className="home-scroll-container" aria-label="Home Page">
         {/* Cosmic Hero Section */}

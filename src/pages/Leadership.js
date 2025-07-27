@@ -14,7 +14,7 @@ const Leadership = () => {
   return (
     <>
       <Helmet>
-        <link rel="canonical" href="https://primetalsolutions.com/leadership" />
+        <link rel="canonical" href="https://primetelsolutionsfze.com/leadership" />
       </Helmet>
       <section className="section leadership-section" id="leadership" aria-labelledby="leadership-heading">
         <div className="section-content">

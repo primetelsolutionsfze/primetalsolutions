@@ -14,7 +14,7 @@ const Technologies = () => {
   return (
     <>
       <Helmet>
-        <link rel="canonical" href="https://primetalsolutions.com/technologies" />
+        <link rel="canonical" href="https://primetelsolutionsfze.com/technologies" />
       </Helmet>
       <section className="section technologies-section" id="technologies" aria-labelledby="technologies-heading">
         <div className="particles-bg" id="particles-js" data-aos="fade-in" data-aos-delay="100" role="presentation"></div>

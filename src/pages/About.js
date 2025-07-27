@@ -13,7 +13,7 @@ const About = () => {
   return (
     <>
       <Helmet>
-        <link rel="canonical" href="https://primetalsolutions.com/about" />
+        <link rel="canonical" href="https://primetelsolutionsfze.com/about" />
       </Helmet>
       <section className="section about-section" id="about" aria-labelledby="about-heading">
         <div className="circles-bg" role="presentation">

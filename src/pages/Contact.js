@@ -28,7 +28,7 @@ const Contact = () => {
   return (
     <>
       <Helmet>
-        <link rel="canonical" href="https://primetalsolutions.com/contact" />
+        <link rel="canonical" href="https://primetalsolutionsfze.com/contact" />
       </Helmet>
       <section className="section contact-section" id="contact">
         <div className="contact-bg" data-aos="fade-in" data-aos-delay="100"></div>

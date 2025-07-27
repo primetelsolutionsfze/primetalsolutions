@@ -14,7 +14,7 @@ const WhyPrimetel = () => {
   return (
     <>
       <Helmet>
-        <link rel="canonical" href="https://primetalsolutions.com/why" />
+        <link rel="canonical" href="https://primetelsolutionsfze.com/why" />
       </Helmet>
       <section className="section why-primetel-section" id="why-primetel" aria-labelledby="why-heading">
         <div className="floating-shapes" data-aos="zoom-in" data-aos-delay="100" role="presentation">
