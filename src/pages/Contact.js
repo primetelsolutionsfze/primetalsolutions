@@ -46,7 +46,7 @@ const Contact = () => {
                   </svg>
                 </div>
                 <h3 data-aos="fade-up" data-aos-delay="200">Email Us</h3>
-                <a href="mailto:primetelsolutionsfze@gmail.com" data-aos="fade-left" data-aos-delay="250">primetelsolutionsfze@gmail.com</a>
+                <a href="mailto:primetelsolutionsfze@gmail.com" data-aos="fade-left" data-aos-delay="250">contact@primetelsolutionsfze.com</a>
               </div>
               <div className="info-card" data-aos="flip-up" data-aos-delay="200">
                 <div className="info-icon" data-aos="zoom-in" data-aos-delay="250">
